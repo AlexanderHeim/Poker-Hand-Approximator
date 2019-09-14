@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Card {
 
-	private final int amountOfColors = 4;
-	private final int amountOfCardNumbers = 13;
+	private final int AMOUNTOFCOLORS = 4;
+	private final int AMOUNTOFCARDNUMBERS = 13;
 
 	private static Random r = new Random();
 	private int cardNumber;
@@ -16,18 +16,18 @@ public class Card {
 	}
 
 	public void setRandomNumber() {
-		setNumber(r.nextInt(amountOfCardNumbers) + 1);
-		setColor(r.nextInt(amountOfColors) + 1);
+		setNumber(r.nextInt(AMOUNTOFCARDNUMBERS) + 1);
+		setColor(r.nextInt(AMOUNTOFCOLORS) + 1);
 	}
 
 	private void setNumber(int number) {
-		if (number > 13 || number < 1)
+		if (number > AMOUNTOFCARDNUMBERS || number < 1)
 			return;
 		this.cardNumber = number;
 	}
 
 	private void setColor(int color) {
-		if (color > 4 || color < 1)
+		if (color > AMOUNTOFCOLORS || color < 1)
 			return;
 		this.color = color;
 	}
