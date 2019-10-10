@@ -15,7 +15,7 @@ public class Pokerbeispiel {
         	try {
             		int i = Integer.parseInt(br.readLine());
 			pc.printProbabilities(i);
-        	} catch(NumberFormatException nfe) {
+        	} catch(NumberFormatException | IOException nfe) {
             		System.err.println("Invalid Format!");
         	}
 		
